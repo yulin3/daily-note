@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<title>myFlexTB</title>
+		<script>
+		(function () {
+			document.addEventListener('DOMContentLoaded', function () {
+				var html = document.documentElement,
+					//屏幕物理宽度
+					deviceWidth = html.clientWidth,
+					//获取手机dpr 字体大小根据dpr设置
+					dpr = window.devicePixelRatio || 1,
+					//根据dpr设置缩放
+					scale = 1 / devicePixelRatio;	
+					
+				html.setAttribute('data-dpr', dpr);
+				document.querySelector('meta[name="viewport"]').setAttribute('content','width=device-width, initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+				if (deviceWidth > 1080) deviceWidth = 1080;
+				html.style.fontSize = deviceWidth * dpr / 10 + 'px';
+				//根font-size, 屏幕宽度 * dpr / 因子10 + 'px';
+			}, false);
+		})();
+		</script>
+		<style>
+			/*cssReset*/
+			blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul {margin:0;padding:0}    
+			h1,h2,h3,h4,h5,h6 {font-size:100%}  
+			address,cite,dfn,em,var {font-style:normal}  
+			code,kbd,pre,samp {font-family:courier new,courier,monospace}  
+			small {font-size:12px}  
+			ol,ul {list-style:none}  
+			a {text-decoration:none}  
+			a:hover {text-decoration:underline}  
+			sup {vertical-align:text-top}  
+			sub {vertical-align:text-bottom}  
+			legend {color:#000}  
+			fieldset,img {border:0}  
+			button,input,select,textarea {font-size:100%}  
+			table {border-collapse:collapse;border-spacing:0}  
+			
+			.bodyFS {
+				font-size: 0; 
+			}
+			.hDivStyle {
+				font-size: 12px; 
+				/*默认写上dpr为1的fontSize*/
+			}
+			[data-dpr="2"] .hDivStyle {
+				font-size: 48px;
+				/*因为缩放*2*/
+			}
+			[data-dpr="3"] .hDivStyle {
+				font-size: 72px;
+			}
+			
+			header, footer {
+				width: 10rem;
+				height: 2rem;
+				border: 1px solid black;
+			}
+			nav {
+				width: 10rem;
+				height: 1.25rem;
+				border: 1px solid green;
+			}
+			article {
+				width: 8rem;
+				height: 12.4rem;
+				border: 1px solid red;
+				display: inline-block;
+			}
+			aside {
+				width: 1.9rem;
+				height: 12.4rem;
+				border: 1px solid blue;
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body class="bodyFS">
+		<header><div class="hDivStyle">标题</div></header>
+		<nav></nav>
+		<article>
+			<section></section>
+		</article>
+		<aside></aside>
+		<footer></footer>
+	</body>
+</html>
