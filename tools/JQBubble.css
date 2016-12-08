@@ -1,0 +1,15 @@
+.bTrips {
+	width: 600px;
+	height: 250px;
+	word-wrap: break-word;
+	overflow: scroll;
+	overflow-x: hidden;
+	z-index: 999;
+	border-radius: 10px;
+}
+.bTripsclose {
+	font-size: 50px;
+	position: absolute;
+	top: -20px;
+	right: 0;
+}

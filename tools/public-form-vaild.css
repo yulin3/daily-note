@@ -1,0 +1,24 @@
+/*表单验证样式*/
+.fpaddingB10 {
+	padding-bottom: 10px;
+}
+.fMsgDefault {
+	font-size: 0.7em;
+	color: white;
+	display: none;
+	overflow: hidden;
+	z-index: 999;
+}
+.fVaildError {
+	background-color: #F5E79E;
+}
+.fErrMsg {
+	width: auto;
+	padding: 4px;
+ 	text-align: center;
+	background-color: #3299ff;
+ 	border-radius: 4px;
+  	font-family:"Microsoft YaHei";
+  	display: block;
+	position: absolute;
+}
