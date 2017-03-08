@@ -1,0 +1,13 @@
+
+<div class="menuTrees">
+    <ul>
+        <li id="menu-{{item[0]}}" ng-repeat="item in FMenuList track by $index" ng-click="toggleDisplay(item[0], $event)">
+            <span class="menu-icon"><img ng-src="{{item[2]}}" ></span><span class="menu">{{item[1]}}</span>
+            <ul id="sMenu-{{item[0]}}" class="sMenu" style="display:none;">
+                <li ng-repeat="sItem in SMenuList[$index] track by $index" ng-click="toggleActive(this, $event)" ui-sref="{{sItem[2]}}" class="sMenuHover" id="menu-item-{{sItem[3]}}">
+                    <span class="sMenu-icon"></span><span class="sMenuSelf">{{sItem[1]}}</span>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
