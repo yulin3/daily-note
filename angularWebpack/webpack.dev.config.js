@@ -77,6 +77,12 @@ module.exports = {
         index: ['webpack-dev-server/client?http://dev-houtai.siruijk.com:80', __dirname + '/main.js'],
         vendor: ["angular", 'angular-ui-router']
     }),
+     // 多页应用，一个入口文件不能引用另一个入口文件
+    // entry: Object.assign(entries, {
+    //     // index: ['webpack-dev-server/client?http://127.0.0.1:8808', __dirname + '/main.js'],
+    //     index: __dirname + '/main.js',
+    //     vendor: [__dirname + '/libs/js/jquery/jquery', __dirname + '/libs/js/underscore/underscore']
+    // }),
     // 文件出口
     output: {
         path: distDir,
